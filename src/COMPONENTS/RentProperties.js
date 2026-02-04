@@ -18,7 +18,7 @@ const RentProperties = () => {
     <div className="bg-white py-5">
       <div className="container px-4">
         
-        {/* Header Section */}
+       
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h4 className="fw-bold m-0" style={{ fontSize: '22px', color: '#333' }}>
             Best Properties For Rent
@@ -31,13 +31,13 @@ const RentProperties = () => {
           </button>
         </div>
 
-        {/* Grid: 4 cards */}
+       
         <div className="row g-4">
           {rentData.map((item) => (
             <div className="col-md-3" key={item.id}>
               <div className="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style={{ border: '1px solid #efefef' }}>
                 
-                {/* Image Section with Share/Heart icons */}
+                
                 <div className="position-relative p-2">
                   <img src={item.img} className="rounded-4 w-100" alt="property" style={{ height: '180px', objectFit: 'cover' }} />
                   <div className="position-absolute top-0 end-0 m-3 d-flex gap-2">
@@ -50,7 +50,7 @@ const RentProperties = () => {
                   </div>
                 </div>
 
-                {/* Details Section */}
+               
                 <div className="card-body pt-0 px-3 pb-3">
                   <h5 className="fw-bold mt-2 mb-0" style={{ fontSize: '18px' }}>
                     ₹{item.price}<span className="text-secondary fw-normal" style={{ fontSize: '12px' }}>/Month</span>

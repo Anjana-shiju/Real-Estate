@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm" style={{ minHeight: '90px' }}>
       <div className="container-fluid px-md-5">
         
-        {/* 1. Logo Section - Fixed 'R' position above 'K' */}
+        
         <div className="d-flex align-items-center py-2">
           <div className="d-flex flex-column justify-content-center">
             <h2 className="m-0 fw-bolder lh-1" style={{ 
@@ -17,7 +17,7 @@ const Navbar = () => {
               display: 'inline-block'
             }}>
               POKAK
-              {/* R symbol 'K' nte thottu mukalil aayi set cheythu */}
+              
               <span style={{ 
                 fontSize: '12px', 
                 position: 'absolute', 

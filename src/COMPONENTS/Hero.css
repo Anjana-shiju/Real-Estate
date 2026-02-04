@@ -44,7 +44,7 @@
   }
 
   .hero-text {
-    padding-right: 120px; /* 👈 image-inu space kodukkunnu */
+    padding-right: 120px; 
   }
 
   .hero-img-wrapper {
@@ -56,7 +56,7 @@
   }
 
   .hero-img {
-    height: 220px;   /* 👈 kurachu kurachu */
+    height: 220px;   
     width: auto;
     object-fit: contain;
   }

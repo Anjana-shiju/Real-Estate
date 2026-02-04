@@ -9,7 +9,7 @@ const PromoBanners = () => {
   };
 
   return (
-    /* Footer-umayi nalla gap kittan 'margin-bottom' 120px aakki */
+    
     <div className="container px-4" style={{ marginBottom: '400px', marginTop: '80px' }}> 
       <div className="row g-4">
         
@@ -49,7 +49,7 @@ const PromoBanners = () => {
   className="d-flex align-items-end justify-content-center"
   style={{
     width: '45%',
-    height: '280px',   // 👈 banner height
+    height: '280px',   
     overflow: 'hidden',
   }}
 >
@@ -58,8 +58,8 @@ const PromoBanners = () => {
   alt="offer"
   style={{
     width: '100%',
-    height: '100%',        // 👈 full height edukum
-    // objectFit: 'cover',    // 👈 valuth aayi fill
+    height: '100%',        
+    // objectFit: 'cover',    
     objectPosition: 'bottom',
     display: 'block',
   }}

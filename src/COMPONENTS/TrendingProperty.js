@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Trending properties-nu vendi ulla images
+
 import prop1 from "../COMPONENTS/Images/trop1.jpg";
 import prop2 from "../COMPONENTS/Images/trop2";
 import prop3 from "../COMPONENTS/Images/trop3";
@@ -25,10 +25,10 @@ const TrendingProperties = () => {
   ];
 
   return (
-    <div className="py-5" style={{ backgroundColor: '#e0f7f7' }}> {/* Light blue background */}
+    <div className="py-5" style={{ backgroundColor: '#e0f7f7' }}> 
       <div className="container px-4">
         
-        {/* Header Section */}
+        
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h4 className="fw-bold m-0" style={{ fontSize: '22px', color: '#333' }}>
             Trending Properties Near 
@@ -41,13 +41,13 @@ const TrendingProperties = () => {
           </button>
         </div>
 
-        {/* Grid: 2 rows with 4 cards each */}
+        
         <div className="row g-4">
           {trendingData.map((item) => (
             <div className="col-md-3" key={item.id}>
               <div className="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                 
-                {/* Property Image with Icons */}
+               
                 <div className="position-relative p-2">
                   <img src={item.img} className="rounded-4 w-100" alt="property" style={{ height: '160px', objectFit: 'cover' }} />
                   <div className="position-absolute top-0 end-0 m-3 d-flex gap-2">
@@ -60,7 +60,7 @@ const TrendingProperties = () => {
                   </div>
                 </div>
 
-                {/* Property Details */}
+               
                 <div className="card-body pt-0 px-3 pb-3">
                   <h5 className="fw-bold mt-2 mb-1" style={{ fontSize: '17px' }}>₹{item.price}</h5>
                   <p className="fw-bold mb-0" style={{ fontSize: '14px', color: '#444' }}>{item.title}</p>

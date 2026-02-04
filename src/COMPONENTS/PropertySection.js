@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Ningalude local images folder-il ninnu import cheyyuka
+
 import roomImg1 from "../COMPONENTS/Images/pro1.jfif"; 
 import roomImg2 from "../COMPONENTS/Images/pro2.jpg";
 import roomImg3 from "../COMPONENTS/Images/pro3.png";
@@ -31,16 +31,16 @@ const PropertySection = () => {
           </button>
         </div>
 
-        {/* Grid */}
+       
         <div className="row g-4">
           {properties.map((item) => (
             <div className="col-md-3" key={item.id}>
               <div className="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style={{ border: '1px solid #efefef' }}>
                 
-                {/* Image Section */}
+               
                 <div className="position-relative p-2">
                   <img src={item.img} className="rounded-4 w-100" alt="room" style={{ height: '180px', objectFit: 'cover' }} />
-                  {/* Standard Share & Heart Icons */}
+                  
                   <div className="position-absolute top-0 end-0 m-3 d-flex gap-2">
                     <div className="bg-white p-1 rounded-circle shadow-sm d-flex align-items-center justify-content-center" style={{ width: '30px', height: '30px', cursor: 'pointer' }}>
                       <i className="bi bi-share" style={{ color: '#00a6a6', fontSize: '14px' }}></i>
@@ -51,7 +51,7 @@ const PropertySection = () => {
                   </div>
                 </div>
 
-                {/* Details */}
+               
                 <div className="card-body pt-0 px-3 pb-3">
                   <div className="d-flex justify-content-between align-items-center mt-2">
                     <h5 className="fw-bold m-0" style={{ fontSize: '18px' }}>
@@ -61,7 +61,7 @@ const PropertySection = () => {
                   </div>
                   <p className="text-secondary mb-3 mt-1" style={{ fontSize: '14px' }}>{item.loc}</p>
 
-                  {/* Amenities */}
+               
                   <div className="d-flex justify-content-between align-items-center border-top pt-2">
                     <div className="d-flex align-items-center gap-2">
                       <div className="d-flex align-items-center gap-1 text-secondary" style={{ fontSize: '11px' }}>
@@ -71,7 +71,7 @@ const PropertySection = () => {
                         <i className="bi bi-egg-fried"></i> Food Included
                       </div>
                     </div>
-                    {/* Rating */}
+                  
                     <div className="d-flex align-items-center">
                       <i className="bi bi-star-fill text-warning" style={{ fontSize: '12px' }}></i>
                       <span className="fw-bold ms-1" style={{ fontSize: '13px' }}>4.8</span>
