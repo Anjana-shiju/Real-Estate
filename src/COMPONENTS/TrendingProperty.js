@@ -1,0 +1,86 @@
+import React from 'react';
+
+// Trending properties-nu vendi ulla images
+import prop1 from "../COMPONENTS/Images/trop1.jpg";
+import prop2 from "../COMPONENTS/Images/trop2";
+import prop3 from "../COMPONENTS/Images/trop3";
+import prop4 from "../COMPONENTS/Images/trop4";
+import prop5 from "../COMPONENTS/Images/trop5";
+import prop6 from "../COMPONENTS/Images/trop6.jpg";
+import prop7 from "../COMPONENTS/Images/trop7";
+import prop8 from "../COMPONENTS/Images/trop8.jpg";
+
+
+const TrendingProperties = () => {
+  // 8 properties-te array
+  const trendingData = [
+    { id: 1, img: prop1, price: "50 Lac", title: "3BHK House" },
+    { id: 2, img: prop2, price: "50 Lac", title: "3BHK House" },
+    { id: 3, img: prop3, price: "50 Lac", title: "3BHK House" },
+    { id: 4, img: prop4, price: "50 Lac", title: "3BHK House" },
+    { id: 5, img: prop5, price: "50 Lac", title: "3BHK House" },
+    { id: 6, img: prop6, price: "50 Lac", title: "3BHK House" },
+    { id: 7, img: prop7, price: "50 Lac", title: "3BHK House" },
+    { id: 8, img: prop8, price: "50 Lac", title: "3BHK House" },
+  ];
+
+  return (
+    <div className="py-5" style={{ backgroundColor: '#e0f7f7' }}> {/* Light blue background */}
+      <div className="container px-4">
+        
+        {/* Header Section */}
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h4 className="fw-bold m-0" style={{ fontSize: '22px', color: '#333' }}>
+            Trending Properties Near 
+          </h4>
+          <button 
+            className="btn btn-sm px-3 rounded-2 fw-bold" 
+            style={{ backgroundColor: '#00a6a6', color: 'white', fontSize: '13px' }}
+          >
+            View all
+          </button>
+        </div>
+
+        {/* Grid: 2 rows with 4 cards each */}
+        <div className="row g-4">
+          {trendingData.map((item) => (
+            <div className="col-md-3" key={item.id}>
+              <div className="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                
+                {/* Property Image with Icons */}
+                <div className="position-relative p-2">
+                  <img src={item.img} className="rounded-4 w-100" alt="property" style={{ height: '160px', objectFit: 'cover' }} />
+                  <div className="position-absolute top-0 end-0 m-3 d-flex gap-2">
+                    <div className="bg-white p-1 rounded-circle shadow-sm d-flex align-items-center justify-content-center" style={{ width: '28px', height: '28px' }}>
+                      <i className="bi bi-share" style={{ color: '#00a6a6', fontSize: '13px' }}></i>
+                    </div>
+                    <div className="bg-white p-1 rounded-circle shadow-sm d-flex align-items-center justify-content-center" style={{ width: '28px', height: '28px' }}>
+                      <i className="bi bi-heart" style={{ color: '#00a6a6', fontSize: '14px' }}></i>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Property Details */}
+                <div className="card-body pt-0 px-3 pb-3">
+                  <h5 className="fw-bold mt-2 mb-1" style={{ fontSize: '17px' }}>₹{item.price}</h5>
+                  <p className="fw-bold mb-0" style={{ fontSize: '14px', color: '#444' }}>{item.title}</p>
+                  <div className="d-flex justify-content-between align-items-center mt-1">
+                    <p className="text-secondary mb-0" style={{ fontSize: '13px' }}>Kakkand, Kochi</p>
+                    <div className="d-flex align-items-center">
+                      <i className="bi bi-star-fill text-warning" style={{ fontSize: '12px' }}></i>
+                      <span className="fw-bold ms-1" style={{ fontSize: '12px' }}>4.8</span>
+                      <span className="text-secondary ms-1" style={{ fontSize: '11px' }}>(73)</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TrendingProperties;

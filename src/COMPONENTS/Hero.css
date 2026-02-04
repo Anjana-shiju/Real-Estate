@@ -1,0 +1,63 @@
+/* MAIN HERO BOX */
+.hero-box {
+  background-color: #86d3d7;
+  height: 240px;
+  overflow: hidden;
+}
+
+/* TEXT */
+.hero-title {
+  font-size: calc(24px + 1vw);
+  letter-spacing: -1px;
+}
+
+.hero-desc {
+  font-size: calc(14px + 0.2vw);
+  max-width: 200px;
+  opacity: 0.9;
+}
+
+/* IMAGE DESKTOP */
+.hero-img-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  height: 100%;
+  width: 120%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hero-img {
+  height: 110%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* MOBILE & TABLET */
+
+@media (max-width: 767px) {
+  .hero-box {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .hero-text {
+    padding-right: 120px; /* 👈 image-inu space kodukkunnu */
+  }
+
+  .hero-img-wrapper {
+    position: absolute;
+    right: -88px;
+    bottom: -5px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero-img {
+    height: 220px;   /* 👈 kurachu kurachu */
+    width: auto;
+    object-fit: contain;
+  }
+}
