@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Rental properties-nu vendi ulla images
 import rent1 from "../COMPONENTS/Images/rop1.jpg";
 import rent2 from "../COMPONENTS/Images/rop2.jfif";
 import rent3 from "../COMPONENTS/Images/rop3";
@@ -15,12 +13,13 @@ const RentProperties = () => {
   ];
 
   return (
-    <div className="bg-white py-5">
+    /* Background color changed to bg-light (#f8f9fa) */
+    <div className="py-5" style={{ backgroundColor: '#f0f2f5' }}> 
       <div className="container px-4">
         
-       
+        {/* Header Section - Fixed for Mobile */}
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h4 className="fw-bold m-0" style={{ fontSize: '22px', color: '#333' }}>
+          <h4 className="fw-bold m-0" style={{ fontSize: '20px', color: '#333', maxWidth: '70%' }}>
             Best Properties For Rent
           </h4>
           <button 
@@ -31,32 +30,34 @@ const RentProperties = () => {
           </button>
         </div>
 
-       
         <div className="row g-4">
           {rentData.map((item) => (
             <div className="col-md-3" key={item.id}>
               <div className="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style={{ border: '1px solid #efefef' }}>
                 
-                
+                {/* Image & Teal Overlay Buttons */}
                 <div className="position-relative p-2">
                   <img src={item.img} className="rounded-4 w-100" alt="property" style={{ height: '180px', objectFit: 'cover' }} />
+                  
                   <div className="position-absolute top-0 end-0 m-3 d-flex gap-2">
-                    <div className="bg-white p-1 rounded-circle shadow-sm d-flex align-items-center justify-content-center" style={{ width: '28px', height: '28px' }}>
-                      <i className="bi bi-share" style={{ color: '#00a6a6', fontSize: '13px' }}></i>
+                    {/* Share Icon Teal */}
+                    <div className="bg-white p-1 rounded-circle shadow-sm d-flex align-items-center justify-content-center" style={{ width: '30px', height: '30px', cursor: 'pointer' }}>
+                      <i className="bi bi-share" style={{ color: '#00a6a6', fontSize: '14px' }}></i>
                     </div>
-                    <div className="bg-white p-1 rounded-circle shadow-sm d-flex align-items-center justify-content-center" style={{ width: '28px', height: '28px' }}>
-                      <i className="bi bi-heart" style={{ color: '#00a6a6', fontSize: '14px' }}></i>
+                    {/* Heart Icon Teal */}
+                    <div className="bg-white p-1 rounded-circle shadow-sm d-flex align-items-center justify-content-center" style={{ width: '30px', height: '30px', cursor: 'pointer' }}>
+                      <i className="bi bi-heart-fill" style={{ color: '#00a6a6', fontSize: '14px' }}></i>
                     </div>
                   </div>
                 </div>
 
-               
                 <div className="card-body pt-0 px-3 pb-3">
                   <h5 className="fw-bold mt-2 mb-0" style={{ fontSize: '18px' }}>
                     ₹{item.price}<span className="text-secondary fw-normal" style={{ fontSize: '12px' }}>/Month</span>
                   </h5>
                   <p className="fw-bold mb-1" style={{ fontSize: '14px', color: '#333' }}>{item.title}</p>
                   
+                  {/* Location & Rating Same Line */}
                   <div className="d-flex justify-content-between align-items-center">
                     <p className="text-secondary mb-0" style={{ fontSize: '13px' }}>Kakkand, Kochi</p>
                     <div className="d-flex align-items-center">

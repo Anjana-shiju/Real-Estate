@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6'; // Twitter-inu pakaram 'X'
+import logo from "../COMPONENTS/Images/pokka.png"; 
 
 const Footer = () => {
   return (
@@ -8,65 +10,37 @@ const Footer = () => {
       className="pt-5 pb-4 mt-5"
     >
       <div className="container pt-4">
-        <div className="row g-4">
+        {/* 'align-items-stretch' upayogichu ellathinteyum height same aakki */}
+        <div className="row g-4 text-center text-md-start align-items-stretch">
 
-          {/* Logo Section */}
-          <div className="col-12 col-md-4">
-            <div className="mb-4">
-              <h1
-                className="fw-bolder mb-0"
-                style={{
-                  letterSpacing: '3px',
-                  fontSize: '45px',
-                  fontFamily: 'sans-serif',
-                  position: 'relative',
-                  display: 'inline-block',
-                }}
-              >
-                POKAK
-                <span
-                  style={{
-                    fontSize: '15px',
-                    position: 'absolute',
-                    top: '5px',
-                    right: '-15px',
-                  }}
-                >
-                  ®
-                </span>
-              </h1>
-
-              <p
-                className="small mb-0 opacity-75 mt-1"
-                style={{ letterSpacing: '2px', fontSize: '11px' }}
-              >
-                TECHNOLOGIES PVT LTD
-              </p>
+          {/* Logo & Social Section - Quick Links height match aakkanulla logic */}
+          <div className="col-12 col-md-4 d-flex flex-column justify-content-between">
+            <div className="mb-2">
+              {/* Logo valippam Quick Links block-inu anuyojyamaya reethiyil set aakki */}
+              <img 
+                src={logo} 
+                alt="POKAK TECHNOLOGIES" 
+                style={{ 
+                  width: '100%', 
+                  maxWidth: '380px', // Exact visual balance
+                  height: 'auto',
+                  filter: 'brightness(0) invert(1)' 
+                }} 
+                className="img-fluid"
+              />
             </div>
 
-            {/* Social Icons */}
-            <div className="d-flex gap-4 fs-5 mt-4 mb-5">
-              {[FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn].map(
-                (Icon, i) => (
-                  <Icon
-                    key={i}
-                    style={{ cursor: 'pointer' }}
-                    className="opacity-75 hover-opacity"
-                  />
-                )
-              )}
-            </div>
+            {/* Social Media Icons - Exactly below logo area */}
+            
           </div>
 
-
-
           {/* Quick Links */}
-          <div className="col-6 col-md-2">
+          <div className="col-12 col-md-2">
             <h6 className="fw-bold mb-3">Quick Links</h6>
-            <ul className="list-unstyled d-flex flex-column gap-2 opacity-75 small">
+            <ul className="list-unstyled d-flex flex-column gap-2 opacity-75 small mb-0">
               {['Home', 'Rental', 'Paying Guest', 'Buying', 'Offers', 'Bookings'].map(
                 (item, i) => (
-                  <li key={i} style={{ cursor: 'pointer' }}>
+                  <li key={i} style={{ cursor: 'pointer', lineHeight: '1.6' }}>
                     {item}
                   </li>
                 )
@@ -75,48 +49,32 @@ const Footer = () => {
           </div>
 
           {/* Customer Care */}
-          <div className="col-6 col-md-3">
+          <div className="col-12 col-md-3">
             <h6 className="fw-bold mb-3">Customer Care</h6>
             <ul className="list-unstyled d-flex flex-column gap-2 opacity-75 small">
               {[
-                'Help Center',
-                'FAQ',
-                'Contact Support',
-                'Cancellation & Refund Policies',
-                'Terms & Conditions',
-                'Privacy & Policies',
+                'Help Center', 'FAQ', 'Contact Support',
+                'Cancellation & Refund', 'Terms & Conditions', 'Privacy & Policies'
               ].map((item, i) => (
-                <li key={i} style={{ cursor: 'pointer' }}>
+                <li key={i} style={{ cursor: 'pointer', lineHeight: '1.6' }}>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-
-
-          {/* Newsletter */}
+          {/* Newsletter Section */}
           <div className="col-12 col-md-3">
             <h6 className="fw-bold mb-3">Stay Connected</h6>
-            <p className="small opacity-75 mb-3">
-              Subscribe To Our News Letter
-            </p>
-
+            <p className="small opacity-75 mb-3">Subscribe To Our News Letter</p>
             <div className="d-flex flex-column gap-3">
               <input
                 type="email"
-                className="form-control bg-transparent text-white py-2 shadow-none"
+                className="form-control bg-transparent text-white py-2 shadow-none text-center text-md-start"
                 placeholder="Enter Your Email"
-                style={{
-                  border: '1px solid rgba(255,255,255,0.4)',
-                  fontSize: '14px',
-                }}
+                style={{ border: '1px solid rgba(255,255,255,0.4)', fontSize: '14px' }}
               />
-
-              <button
-                className="btn bg-white w-100 fw-bold py-2"
-                style={{ color: '#00a6a6' }}
-              >
+              <button className="btn bg-white w-100 fw-bold py-2" style={{ color: '#00a6a6' }}>
                 Subscribe
               </button>
             </div>
@@ -124,22 +82,16 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5 pt-4 border-top border-white border-opacity-25 small gap-2">
-          <p className="mb-0 opacity-75 text-center text-md-start">
-            © 2025 Pokak Technologies Pvt Ltd
-          </p>
-
-          <div className="opacity-75 text-center text-md-end">
+        <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5 pt-4 border-top border-white border-opacity-25 small gap-3">
+          <p className="mb-0 opacity-100">© 2026 Pokak Technologies Pvt Ltd</p>
+          <div className="opacity-100">
             Language: <span className="fw-semibold">EN ▼</span>
           </div>
         </div>
       </div>
 
-      {/* Hover effect */}
       <style>{`
-        .hover-opacity:hover {
-          opacity: 1 !important;
-        }
+        .hover-opacity:hover { opacity: 0.7 !important; transition: 0.3s; }
       `}</style>
     </footer>
   );
